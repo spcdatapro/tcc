@@ -68,7 +68,7 @@
 
                 if(parseInt(usrLogged.workingon) === 0){
                     authSrvc.getUltimaEmpresa(+$scope.usr.uid).then(function(ue){
-                        var tmpworkingon = +ue.ultempre > 0 ? +ue.ultempre : 4;
+                        var tmpworkingon = +ue.ultempre > 0 ? +ue.ultempre : 1;
                         empresaSrvc.getEmpresa(tmpworkingon).then(function(r){
                             $scope.qEmpresa = r[0];
                             authSrvc.setEmpresaSess(r[0].id).then(function(s){ $rootScope.workingon = parseInt(s.workingon); });

@@ -6,7 +6,7 @@
 
         $scope.objEmpresa = {};
         $scope.losBancos = [];
-        $scope.params = { idempresa: 0, fAl: moment().toDate(), idbanco: 0, falstr:'' };
+        $scope.params = { idempresa: 0, fAl: moment().toDate(), idbanco: 0, falstr:'', remp: 'tcc' };
         $scope.content = '';
 
         authSrvc.getSession().then(function(usrLogged){

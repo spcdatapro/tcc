@@ -4,7 +4,9 @@
 
     rptchqaprobctrl.controller('rptChequesAprobacionCtrl', ['$scope', 'empresaSrvc', 'jsReportSrvc', 'authSrvc', '$filter', '$confirm', 'bancoSrvc', 'monedaSrvc', '$window', function($scope, empresaSrvc, jsReportSrvc, authSrvc, $filter, $confirm, bancoSrvc, monedaSrvc, $window){
 
-        $scope.params = {idempresa: undefined, fecha: moment().toDate(), bancos: '', bco: undefined, idmoneda: '1' };
+        $scope.params = {
+            idempresa: undefined, fecha: moment().toDate(), bancos: '', bco: undefined, idmoneda: '1', remp: 'tcc'
+        };
         $scope.empresas = [];
         $scope.bancos = [];
         $scope.monedas = [];
